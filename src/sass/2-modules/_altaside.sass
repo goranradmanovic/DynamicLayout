@@ -1,0 +1,51 @@
+.altaside
+	position: absolute
+	z-index: 1
+	width: 300px
+	height: 58vw
+	transform: translateX(100vw)
+	font-size: 1.7em
+	font-weight: 300
+	text-align: center
+	text-transform: capitalize
+	background-color: rgba(0, 0, 0, .9)
+	color: white
+	transition: all 500ms ease-in-out
+
+	+element('open')
+		display: block
+		transform: translateX(calc(100vw - 310px))
+
+	+element('remove')
+		display: none
+
+	+element('btn')
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 80px
+		height: 80px
+		transform: translateX(-80px)
+		cursor: pointer
+		background-color: rgba(0, 0, 0, .9)
+		color: #bbb
+
+		+modifier('open')
+			color: white
+
+		+modifier('remove')
+			display: none
+
+	+element('link')
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 70px
+		margin-top: 15px
+		text-decoration: none
+		color: white
+
+		&:hover
+			color: rgb(58, 175, 169)
+			text-decoration: underline

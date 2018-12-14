@@ -1,0 +1,99 @@
+.pricing
+	display: flex
+	justify-content: space-around
+	align-items: center
+	flex-wrap: wrap
+	width: 100%
+
+	+element('heading')
+		width: 100%
+		height: auto
+		padding: 2%
+		font-size: 2em
+		font-weight: 300
+		text-transform: capitalize
+		color: white
+
+	+element('plan')
+		width: 22%
+		height: auto
+		border-bottom: 10px solid transparent
+		line-height: 2.8
+		background-color: white
+
+		//Border bottom color of plans el.
+		&:nth-of-type(1)
+			border-color: green
+
+		&:nth-of-type(2)
+			border-color: gray
+
+		&:nth-of-type(3)
+			border-color: tomato
+
+		&:nth-of-type(4)
+			border-color: orange
+
+		//Background color of plans title area
+		&:nth-of-type(1) > .pricing__plan--title
+			background-color: green
+
+		&:nth-of-type(2) > .pricing__plan--title
+			background-color: gray
+
+		&:nth-of-type(3) > .pricing__plan--title
+			background-color: tomato
+
+		&:nth-of-type(4) > .pricing__plan--title
+			background-color: orange
+
+		//Color of text of plan price
+		&:nth-of-type(1) > .pricing__plan--price
+			color: green
+
+		&:nth-of-type(2) > .pricing__plan--price
+			color: gray
+
+		&:nth-of-type(3) > .pricing__plan--price
+			color: tomato
+
+		&:nth-of-type(4) > .pricing__plan--price
+			color: orange
+
+		+modifier('title')
+			height: 50px
+			font-size: 1.2em
+			text-transform: uppercase
+			text-align: center
+			color: white
+
+		+modifier('price')
+			height: 80px
+			font-size: 2em
+			text-align: center
+
+		+modifier('list')
+			padding: 0
+			list-style-type: none
+			font-size: 1.1em
+			text-align: center
+			color: gray
+
+			+modifier('item')
+				height: 50px
+
+				&:nth-child(even)
+					background-color: white
+
+				&:nth-child(odd)
+					background-color: #ddd
+
+		+modifier('btn')
+			width: 70%
+			height: 40px
+			margin: 0 auto 20px auto
+			border: 2px solid gray
+			font-size: 1.2em
+			line-height: 1.8
+			text-align: center
+			color: gray

@@ -1,0 +1,60 @@
+//Shared propertys in main navigation
+%navigation-shared-items
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	min-width: 100px
+	max-width: 100px
+	width: 100px
+	height: 9vh
+	padding: 5px
+	border: 1px solid coral
+	font-size: .8em
+	text-decoration: none
+	text-transform: uppercase
+	text-align: center
+	cursor: pointer
+	background-color: rgba(0, 0, 0, .85)
+	color: white
+	transition: background-color 400ms ease-in-out
+
+.gird__header--navigation
+	display: flex
+	align-items: center
+	width: 100%
+	height: auto
+
+	+modifier('link')
+		@extend %navigation-shared-items
+
+		&:hover
+			background-color: rgba(0, 0, 0, .95)
+
+	+modifier('dropdown')
+
+		@extend %navigation-shared-items
+
+		&:before
+			position: absolute
+			padding-right: 5px
+			content: '\f107'
+			font-family: 'Font Awesome\ 5 Free'
+			font-size: 1.4em
+			font-weight: 600
+			transform: translate(0px, 0px)
+
+		&:hover
+			background-color: rgba(0, 0, 0, .9)
+
+		a
+			display: none
+
+		+modifier('open')
+			flex-wrap: wrap
+			background-color: rgba(0, 0, 0, .9)
+
+			a
+				display: inline-flex
+				min-height: 9vh
+				font-size: 1em
+				transform: translate(0px, 8.5vh)

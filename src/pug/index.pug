@@ -1,0 +1,48 @@
+doctype html
+
+html(lang='en')
+
+	head
+		link(rel="icon" href='assets/images/icon/favicon.ico' type='image/x-icon')
+		title Dynamic Layout
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		script(src='https://www.gstatic.com/firebasejs/5.5.4/firebase-app.js')
+		script(src='https://www.gstatic.com/firebasejs/5.5.4/firebase-firestore.js')
+		link(rel='stylesheet' href='assets/css/main.css')
+	body
+
+		.grid
+			header(class='grid__header')
+				include includes/navigation.pug
+
+			section(class='grid__content')
+				include includes/altaside.pug
+
+				include includes/pricingplans.pug
+				
+				include includes/usertable.pug
+
+			aside(class='grid__aside')
+				a(href='#' class='grid__aside--link') Home
+				a(href='#' class='grid__aside--link') Gallery
+				a(href='#' class='grid__aside--link') About Us
+				a(href='#' class='grid__aside--link') Contact Us
+				a(href='#' class='grid__aside--link' target='_blank') Project Github
+			
+			footer(class='grid__footer')
+				.grid__footer--notification
+						
+				.grid__footer--settings(title='Page Settings')
+					i(class='fas fa-cog grid__footer--settings--icon')
+				
+				p(class="grid__footer--info") Designed &amp; Developed by 
+						a(href="https://goranradmanovic.github.io/" target="_blank" class="grid__footer--info--link") Goran Radmanovic
+						
+				p(class="grid__footer--copyright") Copyright 2018
+				
+		include includes/form-modal.pug
+
+		script(src='assets/js/sortable.min.js')
+		script(src='assets/js/main-min.js')

@@ -1,0 +1,43 @@
+.userTable
+	width: 97%
+	margin: 20px auto
+	border-collapse: collapse
+	border-radius: 5px
+	font-style: italic
+	font-weight: 400
+	color: #111
+	background-color: white
+
+	&.color-1
+		background-color: #ff6347
+
+	&.color-2
+		background-color: #00887A
+
+	&.color-3
+		background-color: #0677A1
+
+	+element('heading')
+		margin: 10px 0
+		font-size: 1.2em
+		font-weight: 300
+		text-align: left
+		color: white
+
+	thead > tr > th, tbody > tr > td
+		border-top: 1px solid #ccc
+		text-align: center
+		vertical-align: middle
+
+	thead > tr > th
+		border-top: none
+		font-weight: 300
+		color: white
+		background-color: grey
+
+	tbody > tr:nth-child(odd)
+		background-color: rgba(0, 0, 0, .1)
+
+	tbody > tr > td
+		width: auto
+		height: 25px

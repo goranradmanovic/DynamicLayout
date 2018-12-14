@@ -1,0 +1,24 @@
+.grid__aside
+	grid-column: 4 / 4
+	grid-row: 2
+	font-size: 3em
+	font-weight: 300
+	text-align: center
+	text-transform: capitalize
+	color: white
+	background-color: $bg-aside
+
+	+modifier('link')
+		display: block
+		margin-bottom: 20px
+		font-size: .7em
+		text-decoration: none
+		color: white
+		transition: all 400ms ease-in-out
+
+		&:first-child
+			margin-top: 25vh
+
+		&:hover
+			text-decoration: underline
+			color: $bg-bodyColor

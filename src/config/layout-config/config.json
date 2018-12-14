@@ -1,0 +1,133 @@
+{
+  "Partner": {
+    "id": 1
+  },
+
+  "Templates": {
+
+    "template-0": {
+      "asideClass": "",
+      "headerClass": "",
+      "contentClass": "",
+      "footerClass": "",
+      "isActive": false
+    },
+
+    "template-1": {
+      "asideClass": "grid__aside--left",
+      "headerClass": "",
+      "contentClass": "",
+      "footerClass": "",
+      "isActive": false
+    },
+
+    "template-2": {
+      "asideClass": "grid__aside--top",
+      "headerClass": "grid__header-footer--pull",
+      "contentClass": "",
+      "footerClass": "grid__header-footer--pull",
+      "isActive": false
+    },
+
+    "template-3": {
+      "asideClass": "grid__aside--left--top",
+      "headerClass": "grid__header-footer--pull",
+      "contentClass": "",
+      "footerClass": "grid__header-footer--pull",
+      "isActive": false
+    },
+
+    "template-4": {
+      "asideClass": "grid__aside--remove",
+      "headerClass": "grid__span--allwidth",
+      "contentClass": "grid__span--allwidth",
+      "footerClass": "grid__span--allwidth",
+      "isActive": true
+    }
+  },
+
+  "TableColor": {
+    "id": 2
+  },
+
+  "Plans": [
+    {"title": "Starter", "price": 10000, "items": ["Feature-1", "Feature-2", "Feature-3", "Feature-4", "Feature-5", "Feature-6"], "btnText": "Request Offer", "order":4}, 
+    {"title": "Regular", "price": 200, "items": ["Feature-1", "Feature-2", "Feature-3", "Feature-4", "Feature-5", "Feature-6"], "btnText": "Request Offer", "order": 2},
+    {"title": "Enterprise", "price": 500, "items": ["Feature-1", "Feature-2", "Feature-3", "Feature-4", "Feature-5", "Feature-6"], "btnText": "Request Offer", "order": 3},
+    {"title": "Enterprise Elite", "price": 1000, "items": ["Feature-1", "Feature-2", "Feature-3", "Feature-4", "Feature-5", "Feature-6"], "btnText": "Request Offer", "order": 1}
+  ],
+
+  "Navigation": [
+    {
+      "itemName": "Item-1",
+      "indexPosition": 1,
+      "locked": true
+    },
+
+    {
+      "itemName": "Item-2",
+      "indexPosition": 2,
+      "locked": true
+    },
+
+    {
+      "itemName": "Item-3",
+      "indexPosition": 3,
+      "locked": true
+    },
+
+    {
+      "itemName": "Item-4",
+      "indexPosition": 4,
+      "locked": false
+    },
+
+    {
+      "itemName": "Item-5",
+      "indexPosition": 10,
+      "locked": false
+    },
+
+    {
+      "itemName": "Item-6",
+      "indexPosition": 12,
+      "locked": false
+    },
+
+    {
+      "itemName": "Item-7",
+      "indexPosition": 7,
+      "locked": false
+    },
+
+    {
+      "itemName": "Item-8",
+      "indexPosition": 8,
+      "locked": false
+    },
+
+    {
+      "itemName": "Item-9",
+      "indexPosition": 9,
+      "locked": false
+    },
+
+    {
+      "itemName": "Item-10",
+      "indexPosition": 5,
+      "locked": false
+    },
+
+    {
+      "itemName": "Item-11",
+      "indexPosition": 11,
+      "locked": false
+    },
+
+    {
+      "itemName": "Item-12",
+      "indexPosition": 6,
+      "locked": false
+    }
+  ]
+}

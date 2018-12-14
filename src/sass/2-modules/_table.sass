@@ -1,0 +1,35 @@
+.bettingTable
+  width: 100%
+  border: 1px solid black
+  border-collapse: collapse
+  background-color: white
+
+  &.color-1
+      background-color: #ff6347
+
+  &.color-2
+      background-color: #00887A
+
+  &.color-3
+      background-color: #0677A1
+
+  thead > tr > th, tbody > tr > td
+    border: 1px solid black
+    text-align: center
+    vertical-align: middle
+
+  thead > tr > th
+    font-family: 'Arial', sans-serif
+    color: white
+    background-color: darkgray
+
+  thead > tr > th:first-child
+    text-transform: uppercase
+
+  tbody > tr > td
+    width: auto
+    height: 50px
+
+  tbody > tr > td:nth-child(1n+2)
+    max-width: 60px
+    width: 60px

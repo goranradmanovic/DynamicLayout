@@ -1,0 +1,94 @@
+.grid__footer
+	grid-column: span 5
+	grid-row: 3
+	padding-bottom: 10px
+	font-size: 3em
+	line-height: 1.6
+	text-align: center
+	text-transform: uppercase
+	color: white
+	background-color: $bg-footer
+
+	+modifier('notification')
+		position: absolute
+		left: 0
+		display: none
+		width: 24%
+		margin: 4px
+		padding: 2px
+		font-size: .8em
+		font-style: italic
+		text-align: center
+		text-transform: capitalize
+		box-shadow: 3px 3px 3px rgba(0, 0, 0, .8)
+		float: left
+		opacity: 0
+		background-color: rgba(0, 0, 0, .8)
+		will-change: opacity
+
+		+modifier('close')
+			position: relative
+			top: 0
+			right: 0
+			font-size: .3em
+			z-index: 1
+
+	+modifier('settings')
+		display: inline-block
+		margin-right: 20px
+		float: right
+		cursor: pointer
+
+		+modifier('icon')
+			font-size: .8em
+			will-change: transform
+
+			&:hover
+				animation: rotate-center 0.6s ease-in-out both
+
+	+modifier('info')
+		font-size: .4em
+		font-weight: 300
+		line-height: 3
+		text-transform: capitalize
+
+		+modifier('link')
+			font-style: italic
+			text-decoration: none
+			cursor: pointer
+			color: white
+
+			&:hover
+				text-decoration: underline
+
+	+modifier('copyright')
+		font-size: .3em
+		font-weight: 300
+		text-transform: capitalize
+
+.show
+	display: inline-block
+	animation: showNotification 12s forwards
+
+@keyframes rotate-center
+	from
+		transform: rotate(0deg)
+
+	to
+		transform: rotate(360deg)
+
+@keyframes showNotification
+	0%
+		opacity: .5
+
+	15%
+		opacity: 1
+
+	25%
+		opacity: 1
+
+	50%, 75%
+		opacity: 1
+
+	100%
+		opacity: 0
