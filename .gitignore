@@ -1,0 +1,6 @@
+/node_modules
+/src/js/classes/FirestoreDatabase.js
+.firebaserc
+firebase.json
+/.firebase
+SETUP.md
