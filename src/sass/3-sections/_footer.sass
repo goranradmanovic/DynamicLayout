@@ -35,16 +35,18 @@
 
 	+modifier('settings')
 		display: inline-block
-		margin-right: 20px
+		margin-right: 30px
 		float: right
 		cursor: pointer
 
 		+modifier('icon')
+			border-radius: 50%
 			font-size: .8em
 			will-change: transform
+			animation: pulse 2s infinite
 
 			&:hover
-				animation: rotate-center 0.6s ease-in-out both
+				animation: rotate-center .6s ease-in-out both
 
 	+modifier('info')
 		font-size: .4em
@@ -92,3 +94,10 @@
 
 	100%
 		opacity: 0
+
+@keyframes pulse
+	0%
+		box-shadow: 0 0 0 0px rgba(255, 255, 255, .2)
+
+	100%
+		box-shadow: 0 0 0 25px rgba(255, 255, 255, 0)
