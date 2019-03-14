@@ -190,14 +190,16 @@ class Layout extends FirestoreDatabase {
 		this.sortListCheckedItemObject = {};
 		this.sortListCheckedItemArray= [];
 		this.newNavLinksOrder;
+		this.asideSettingLink;
 	}
 
-	//Class getr for page layout
+	//Class getter for page layout
 	get pageLayout() {
 		this.resetActiveTemplate(); //Reset previus layout template
 		this.setActiveTemplate(this.templatesConfig); //Set new template
 		this.altAsideMenuButton();
 		this.settingsButton();
+		this.asideSettingButton();
 		this.modalCloseButton();
 		this.modalFormSave();
 	}
@@ -286,6 +288,35 @@ class Layout extends FirestoreDatabase {
 			this.layoutElements[6].classList.remove('show'); //Remove show class from footer notification el.
 			this.formDataObject = {}; //Reset form data object (empty)
 		}.bind(this));
+	}
+
+	//Function for opening setting form with aside setting link
+	asideSettingButton() {
+
+		this.asideSettingLink = document.querySelectorAll('#pageSettings'); //Get all el. from aside and altaside
+
+		//The Array.from() method creates a new, shallow-copied Array instance from an array-like or iterable object.
+		//And iterate over the array, add event listener to evry link in the array
+		Array.from(this.asideSettingLink).forEach(link => {
+
+			link.addEventListener('click', function() {
+
+				event.preventDefault();
+
+				//Function from FirestoreDatabase class for getting document DB data
+				this.getDbData().then((docs) => {
+					//Loop trught all db document
+					docs.forEach(doc => {
+						window.oldData = doc.data(); //Currently active DB config stored in window object
+					});
+				});
+
+				this.layoutElements[8].classList.add('open'); //Add class open to the modal window
+				this.layoutElements[6].innerText = ''; //Reset text in the footer notification el.
+				this.layoutElements[6].classList.remove('show'); //Remove show class from footer notification el.
+				this.formDataObject = {}; //Reset form data object (empty)
+			}.bind(this));
+		});
 	}
 
 	//Function for closing modal window
