@@ -1,6 +1,7 @@
 //Waiting for document to be loaded
 document.addEventListener('DOMContentLoaded', () => {
 
+
 	let firestoreDatabase = new FirestoreDatabase();
 			firestoreDatabase.firestoreDbOn;
 
