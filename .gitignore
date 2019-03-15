@@ -1,9 +1,0 @@
-/node_modules
-/src/js/classes/FirestoreDatabase.js
-/production/public/assets/js/main.js
-/production/public/assets/js/main-min.js
-.firebaserc
-firebase.json
-/.firebase
-SETUP.md
-.gitignore
